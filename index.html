@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>  
+    <head>  
+        <meta charset="UTF-8">
+        <title>Final Project - Ge Gao</title>  
+        <link rel="stylesheet" href="styles.css">
+        <script type="text/javascript" src="app.js"></script>  
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+    </head>
+    <body onload="final_project()"> 
+
+        <div>
+            <h2 class="section">U.S. Accidents Project</h2>
+            <p class="section">By Ge Gao</p>
+            <p>Investigating the causes of accidents is an important issue that has garnered significant attention in recent years. With the increasing complexity of modern life, accidents can occur in a variety of settings. While some accidents are unavoidable, many can be prevented with appropriate precautions and awareness.
+                <br></br>My project aims to explore the factors that contribute to the occurrence of accidents in the United States. Specifically, I will focus on the influence of environmental conditions such as weather patterns, locations, population density, time of the day, and so on. Ultimately, the goal of this project is to increase public awareness about the risks of accidents and promote the adoption of safer behaviors and practices. By providing valuable insights into the factors that contribute to accidents, this study can inform the development of effective policies and strategies to reduce the incidence of accidents in the United States and beyond.
+            </p>
+        </div>
+
+        <div id="Q">
+            <h3>Does visibility have a correlation to the severity of accidents?</h3>
+            <p>Visibility refers to the ability to see and be seen while driving, which might be a critical factor that leads accidents to happen. 
+                Poor visibility conditions such as fog, heavy rain, snow, or darkness might increase the risk of accidents because drivers may have difficulty seeing other vehicles, pedestrians, or obstacles on the road.
+            </p>
+            <div id="q1"></div>
+            <h4>Plot:</h4>
+            <div id="q1_plot" class="center_plot">
+                <input type="number" id="buttonXlim" value="4">
+                <label for="buttonXlim">Adjust range of X-axis</label>
+            </div>
+            <div>
+                <ul id="Left">
+                    <li>Marks: points represents each individual accident</li>
+                    <li>Channels: Horizontal position: visibility in miles when accidents happened, Vertical position: the severity of accidents divided in to levels</li>
+                    <li>Color Scheme: light blue color for all the circles(accidents).</li>
+                </ul>
+            </div>
+            <p> According to the plot, we can see that when visibility is low, there are way more accidents at each level of accidents than when visibility is high.
+                Furthermore, the plot suggests that the relationship between visibility and accident severity may be non-linear. Higher visibility doesn't correlate to lower level severity of accidents.
+                In other words, the increase in accidents associated with poor visibility may be greater at lower visibility levels than at higher levels. 
+                This finding could have important implications for road safety policies and interventions aimed at reducing the risk of accidents caused by poor visibility.
+            </p>
+        </div>    
+
+        <div id="Q">
+            <h3>Which year has the most number of accidents?</h3>
+            <p>We want to investigate if there is a particular year that have more accidents than usual.</p>
+            <div id="q2"></div>
+            <h4>Plot:</h4>
+            <div id="q2_plot" class="center_plot">
+                <button type="button" id="color_button">Get Red!</button>
+                <button type="button" id="color_button2">Get Purple!</button>
+            </div>
+            <div>
+                <ul id = "Left">
+                    <li>Marks: lines which are the height of each bar represents number of accidents of each year.</li>
+                    <li>Channels: Horizontal position: year of accidents that happened, Vertical position: the number of accidents.</li>
+                    <li>Color Scheme: Sequential green color. It ranges from a light green(representing smaller number of accidents) to a dark green(representing greater number of accidents).</li>
+                </ul>
+            </div>
+            <p> According to the plot, we can see that the number of accidents increases with respect to time. This may be caused by the increase in population according to year.
+                However, accidents in 2020 are way more than in other years. One possible factor causing this might be the COVID-19 pandemic caused significant disruptions to daily routines, 
+                including changes in commuting patterns and an increase in online deliveries. These changes could have led to more people driving or biking on the roads, potentially increasing the risk of accidents.
+            </p>
+        </div>    
+
+        <div id="Q">
+            <h3>For each severity level of accidents, are there more accidents during the day or night?</h3>
+            <p>Now we want to investigate that accidents are more likely to happen during day or night.</p>
+            <div id="q3"></div>
+            <h4>Plot:</h4>
+            <div id="q3_plot" class="center_plot"></div>
+            <div>
+                <ul id = "Left">
+                    <li>Marks: lines which are the height of each bar represents number of accidents of each year</li>
+                    <li>Channels: Horizontal position: the severity of accidents divided in to categorical levels, Vertical position: the number of accidents.</li>
+                    <li>Color Scheme: Orange color represents accidents happened before sunset and midnightblue color represents accidents happened after sunset.</li>
+                </ul>
+            </div>
+            <p>According to the plot, we can see that for every level of severity of accidents, there are more accidents that happened before sunset than after sunset.
+                This might be surprising because according to the findings of plot 1, we get to know that visibility plays an important role when accidents happen. As the sun begins to set, the lighting conditions on the road can change rapidly, 
+                making it more difficult for drivers to see obstacles or other vehicles on the road. This reduced visibility should increase the risk of accidents.
+                However, there are still more accidents during the day than at night. This might be caused by the Rush hour traffic: 
+                Many people commute to work from home in the morning and go home during the time leading up to sunset, 
+                which can lead to increased traffic congestion and higher rates of accidents.
+            </p>
+        </div>    
+
+        <div id="Q">
+            <h3>Which state has the most number of accidents in the U.S.?</h3>
+            <p>It's significant to identify the state with the most accidents since it can help policymakers and safety experts focus their attention on improving safety measures in that state. 
+                This can include measures such as increasing the number of traffic police officers, improving road conditions, and increasing public awareness campaigns.</p>
+            <div id="q4"></div>
+            <h4>Plot:</h4>
+            <div id="q4_plot" class="center_plot"></div>
+            <div>
+                <ul id = "Left">
+                    <li>Marks: using area to represent the borders of each state in the U.S..</li>
+                    <li>Channels: use position to show the location of each state</li>
+                    <li>Color Scheme: Sequential blue color. It ranges from a light blue(representing smaller number of accidents of the state) to a dark blue(representing greater number of accidents of the state).</li>
+                </ul>
+            </div>
+            <p>According to the plot, we can see that California has the most number of accidents. This is a sign that more resources should be allocated to that California to help reduce the number of accidents. 
+                This can include funding for safety programs, road maintenance, and emergency services.</p>
+        </div>    
+
+        <div id="Q">
+            <h3>In what range of wind speed do accidents usually happen?</h3>
+            <p> We want to investigate if wind speed will affect accidents from happening.</p>
+            <div id="q5">
+                <button id="hide-outliers-btn">Hide/Show Outliers</button>
+            </div>
+            <h4>Plot:</h4>
+            <div id="q5_plot" class="center_plot"></div>
+            <div>
+                <ul id = "Left">
+                    <li>Marks: using lines to represent the IQR, range, median, desire min and max of the wind speed data. Use circles to represent outliers.</li>
+                    <li>Channels: using position along the numerical axis to represent the speed of the wind. Using length of the box and whiskers to represent the distribution and range of the values.</li>
+                    <li>Color Scheme: using yellow to represent outliers, green to represent values between IQR. </li>
+                </ul>
+            </div>
+            <p>According to the plot, we can see that most accidents happen during a wind speed varied from 0 to 20. 
+                After adding up the outliers, we can see there are also a few accidents that happened when wind speed is pretty high. 
+                That is, the majority of the time, accidents can still happen at normal wind speed. As a result, we conclude that wind speed might not be an important factor that affects accidents from happening.</p>
+        </div>    
+        
+        <div>
+            <h3> Conclusion: </h3>
+            <p>In conclusion, the plot analysis shows that poor visibility is strongly associated with an increase in the number of accidents, and the relationship between visibility and accident severity is non-linear. 
+                Additionally, the COVID-19 pandemic might have contributed to a surge in accidents in 2020 due to changes in commuting patterns. 
+                Rush hour traffic is another contributing factor to the high number of accidents during the day. 
+                Furthermore, California has the highest number of accidents, indicating a need for increased resources to reduce accidents. 
+                Finally, wind speed may not be a significant factor that affects the occurrence of accidents. These findings highlight the importance of road safety policies and interventions to reduce the risk of accidents caused by poor visibility and rush hour traffic.</p>
+            <p>Some precautions that could be taken to reduce the risk of accidents include:</p>
+            <ul id = "final">
+                <li>Visibility: when driving in low visibility conditions, such as at night or during poor weather, use headlights and ensure they are clean and properly aligned. Additionally, keep the windshield and other windows clean and free of obstructions.</li>
+                <li> Avoid rush hour traffic: if possible, plan your travel to avoid rush hour traffic, which can lead to increased congestion and higher rates of accidents.</li>
+            </ul>
+        </div>
+    </body>  
+</html>

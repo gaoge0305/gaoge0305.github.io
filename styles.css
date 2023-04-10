@@ -1,0 +1,90 @@
+*{
+    box-sizing: border-box;
+    margin: 8;
+    
+}
+  
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+  
+.center_plot {
+    margin: auto;
+    text-align: center;
+}
+
+.section {
+    text-align: center;
+}
+
+#color_button, #color_button2 {
+    background-color: red;
+    color: white;
+    padding: 10px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 10px;
+    font-size: 16px;
+}
+  
+#color_button2 {
+    background-color: purple;
+}
+
+div.tooltip{
+    position: absolute;
+    text-align: center;
+    width: "fit-content";
+    height: "fit-content";
+    padding: 5px;
+    pointer-events: none;
+}
+#hide-outliers-btn {
+    padding: 8px 16px;
+    background-color: gold;
+    cursor: pointer;
+  }
+
+#Left {
+    font-family: "Cormorant Garamond", serif;
+    border: 3px solid lightblue;
+}
+#final {
+    font-family: "Cormorant Garamond", serif;
+}
+
+h3 {
+    color: rgb(88, 98, 108);
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#Q {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 2px 2px 5px #888;
+  }
+
+p {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-family: Arial, sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: rgb(162, 203, 217);
+    border-bottom: 2px solid rgb(162, 203, 217);
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+  }
